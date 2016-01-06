@@ -35,6 +35,10 @@ def evaluate_math_input():
         final = divide(num1,num2)
     elif math_symbol == "square":
         final = square(num1)
+    elif math_symbol == "cube":
+        final = cube(num1)
+    elif math_symbol == "pow":
+        final = power(num1,num2)
 
     print final 
 
