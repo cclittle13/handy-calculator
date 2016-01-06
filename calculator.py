@@ -27,6 +27,8 @@ def evaluate_math_input():
         final = subtract(num1,num2)
     elif math_symbol == "*":
         final = multiply(num1,num2)
+    elif math_symbol == "/":
+        final = divide(num1,num2)
 
     print final 
 
