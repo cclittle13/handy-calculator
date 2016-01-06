@@ -17,9 +17,13 @@ def evaluate_math_input():
 
     tokens = user_math_input.split(" ")
 
-    math_symbol = tokens[0]
-    num1 = int(tokens[1])
-    num2 = int(tokens[2])
+    if len(tokens) == 3:
+        math_symbol = tokens[0]
+        num1 = int(tokens[1])
+        num2 = int(tokens[2])
+    else:
+        math_symbol = tokens[0]
+        num1 = int(tokens[1])
 
     if math_symbol == "+":
         final = add(num1,num2)
@@ -29,6 +33,8 @@ def evaluate_math_input():
         final = multiply(num1,num2)
     elif math_symbol == "/":
         final = divide(num1,num2)
+    elif math_symbol == "square":
+        final = square(num1)
 
     print final 
 
