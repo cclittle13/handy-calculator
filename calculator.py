@@ -39,6 +39,8 @@ def evaluate_math_input():
         final = cube(num1)
     elif math_symbol == "pow":
         final = power(num1,num2)
+    elif math_symbol == "mod":
+        final = mod(num1, num2)
 
     print final 
 
