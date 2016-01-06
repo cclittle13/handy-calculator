@@ -23,10 +23,10 @@ def evaluate_math_input():
 
     if math_symbol == "+":
         final = add(num1,num2)
-        #print final
-
     elif math_symbol == "-":
         final = subtract(num1,num2)
+    elif math_symbol == "*":
+        final = multiply(num1,num2)
 
     print final 
 
