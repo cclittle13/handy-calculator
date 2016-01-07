@@ -1,5 +1,12 @@
-def add(num1, num2):
-    return num1 + num2
+# def add(num1, num2):
+#     return num1 + num2
+
+def add(list_of_inputs):
+    final_sum = 0
+    for num in list_of_inputs[1:]:
+        final_sum += int(num)
+        
+    return final_sum
 
 
 def subtract(num1, num2):

@@ -11,43 +11,102 @@ from arithmetic import *
 
 
 # Your code goes here
-def evaluate_math_input(math_symbol,num1,num2):
+def xtra_credit_eval(tokens):
 
-    # print "Welcome to our calculator!"
-
-    # user_math_input = raw_input("Type your math problem here:\n>> ")
-
-    # tokens = user_math_input.split(" ")
-
-    # if len(tokens) == 3:
-    #     math_symbol = tokens[0]
-    #     num1 = int(tokens[1])
-    #     num2 = int(tokens[2])
-    # else:
-    #     math_symbol = tokens[0]
-    #     num1 = int(tokens[1])
+    math_symbol = tokens[0]
 
     if math_symbol == "+":
-        final = add(num1,num2)
+        final = add(tokens)
     elif math_symbol == "-":
-        final = subtract(num1,num2)
+        final = subtract(tokens)
     elif math_symbol == "*":
-        final = multiply(num1,num2)
+        final = multiply(tokens)
     elif math_symbol == "/":
-        final = divide(num1,num2)
+        final = divide(tokens)
     elif math_symbol == "square":
-        final = square(num1)
+        final = square(tokens)
     elif math_symbol == "cube":
-        final = cube(num1)
+        final = cube(tokens)
     elif math_symbol == "pow":
-        final = power(num1,num2)
+        final = power(tokens)
     elif math_symbol == "mod":
-        final = mod(num1, num2)
+        final = mod(tokens)
 
     print final 
 
+# This is the final solution prior to Extra Credit.
+# def evaluate_math_input(math_symbol,num1,num2):
 
-def handy_calculator():
+#     # print "Welcome to our calculator!"
+
+#     # user_math_input = raw_input("Type your math problem here:\n>> ")
+
+#     # tokens = user_math_input.split(" ")
+
+#     # if len(tokens) == 3:
+#     #     math_symbol = tokens[0]
+#     #     num1 = int(tokens[1])
+#     #     num2 = int(tokens[2])
+#     # else:
+#     #     math_symbol = tokens[0]
+#     #     num1 = int(tokens[1])
+
+#     if math_symbol == "+":
+#         final = add(num1,num2)
+#     elif math_symbol == "-":
+#         final = subtract(num1,num2)
+#     elif math_symbol == "*":
+#         final = multiply(num1,num2)
+#     elif math_symbol == "/":
+#         final = divide(num1,num2)
+#     elif math_symbol == "square":
+#         final = square(num1)
+#     elif math_symbol == "cube":
+#         final = cube(num1)
+#     elif math_symbol == "pow":
+#         final = power(num1,num2)
+#     elif math_symbol == "mod":
+#         final = mod(num1, num2)
+
+#     print final 
+
+
+# def handy_calculator():
+#     """Use this to parse user input and call appropriate math operation."""
+
+#     print "Welcome to our calculator!"
+    
+#     while True:
+#         user_math_input = raw_input("Press 'q' to exit or type your math problem here:\n>> ")
+
+
+#         if user_math_input == 'q':
+#             break
+#         else:
+            
+#             tokens = user_math_input.split(" ")
+#             num2 = 0
+
+
+#             # This is the final solution prior to Extra Credit.
+#             # if len(tokens) == 3:
+#             #     math_symbol = tokens[0]
+#             #     num2 = int(tokens[2])
+#             #     if math_symbol == 'pow':
+#             #         num1 = float(tokens[1])
+#             #     else:
+#             #         num1 = int(tokens[1])
+#             # else:
+#             #     math_symbol = tokens[0]
+#             #     num1 = int(tokens[1])
+            
+#             # evaluate_math_input(math_symbol, num1, num2)
+
+#             continue
+
+#handy_calculator()
+
+def new_calculator():
     """Use this to parse user input and call appropriate math operation."""
 
     print "Welcome to our calculator!"
@@ -61,21 +120,9 @@ def handy_calculator():
         else:
             
             tokens = user_math_input.split(" ")
-            num2 = 0
-
-            if len(tokens) == 3:
-                math_symbol = tokens[0]
-                num2 = int(tokens[2])
-                if math_symbol == 'pow':
-                    num1 = float(tokens[1])
-                else:
-                    num1 = int(tokens[1])
-            else:
-                math_symbol = tokens[0]
-                num1 = int(tokens[1])
-            
-            evaluate_math_input(math_symbol, num1, num2)
-
+            # num2 = 0
+            xtra_credit_eval(tokens)
             continue
 
-handy_calculator()
+
+new_calculator()
