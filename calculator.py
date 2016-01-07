@@ -3,6 +3,8 @@ calculator.py
 
 Using our arithmetic.py file from Exercise02, create the
 calculator program yourself in this file.
+
+This version was pair programmed by cclittle13 and apao @ Hackbright.
 """
 
 from arithmetic import *
