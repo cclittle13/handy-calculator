@@ -65,8 +65,11 @@ def handy_calculator():
 
             if len(tokens) == 3:
                 math_symbol = tokens[0]
-                num1 = int(tokens[1])
                 num2 = int(tokens[2])
+                if math_symbol == 'pow':
+                    num1 = float(tokens[1])
+                else:
+                    num1 = int(tokens[1])
             else:
                 math_symbol = tokens[0]
                 num1 = int(tokens[1])
